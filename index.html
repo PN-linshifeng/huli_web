@@ -39,19 +39,19 @@
     <div class="swiper-container " id="banner">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="content container">
+          <div class="content ">
             <h3>想象不止，探索不止</h3>
             <p>狐狸传媒，文创之路探索无止境</p>
           </div>
         </div>
         <div class="swiper-slide ">
-          <div class="content container">
+          <div class="content ">
             <h3>想象不止，探索不止</h3>
             <p>狐狸传媒，文创之路探索无止境</p>
           </div>
         </div>
         <div class="swiper-slide ">
-          <div class="content container">
+          <div class="content ">
             <h3>想象不止，探索不止</h3>
             <p>狐狸传媒，文创之路探索无止境</p>
           </div>
@@ -62,11 +62,13 @@
     </div>
   </div>
   <script>
-    var mySwiper = new Swiper('#banner', {
-      autoplay: false,//可选选项，自动滑动
-      // loop: true,//可选选项，开启循环
-      pagination: '.pagination',
-      paginationClickable: true,
+    $(function () {
+      var mySwiper = new Swiper('#banner', {
+        autoplay: false,//可选选项，自动滑动
+        // loop: true,//可选选项，开启循环
+        pagination: '.pagination',
+        paginationClickable: true,
+      })
     })
   </script>
 
@@ -185,18 +187,20 @@
             <div id="swipeNext"></div>
           </div>
           <script>
-            var book = new Swiper('#book', {
-              autoplay: false,//可选选项，自动滑动
-              // loop: true,//可选选项，开启循环
+            $(function () {
+              var book = new Swiper('#book', {
+                autoplay: false,//可选选项，自动滑动
+                // loop: true,//可选选项，开启循环
 
-              slidesPerView: 4,
-              slidesPerGroup: 1,
-            })
-            $('#swipePrev').click(function () {
-              book.swipePrev();
-            })
-            $('#swipeNext').click(function () {
-              book.swipeNext();
+                slidesPerView: 4,
+                slidesPerGroup: 1,
+              })
+              $('#swipePrev').click(function () {
+                book.swipePrev();
+              })
+              $('#swipeNext').click(function () {
+                book.swipeNext();
+              })
             })
           </script>
         </div>

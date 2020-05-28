@@ -3,7 +3,7 @@
 
 	.swiper-wrapper {
 		.swiper-slide {
-			height: 640px;
+			height: 640px !important;
 			vertical-align: middle;
 			text-align: center;
 			&::before {
@@ -26,6 +26,8 @@
 			display: inline-block;
 			vertical-align: middle;
 			color: #ffffff;
+			// max-width: 1200px;
+			// padding: 0px 10px;
 		}
 		h3 {
 			font-size: 3.5rem;
