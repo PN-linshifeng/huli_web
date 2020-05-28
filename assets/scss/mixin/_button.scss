@@ -1,0 +1,124 @@
+@mixin button-size(
+  $font-size,
+  $width: auto,
+  $height: auto,
+  $radius: 0,
+  $padding-y: 0,
+  $padding-x: 0
+) {
+  width: $width;
+  height: $height;
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $radius;
+  line-height: $height;
+}
+$btn-disabled: $light;
+// 颜色主题
+$btn-theme-map: (
+  primary: $primary,
+  danger: $danger,
+  dark: $dark,
+  disabled: $btn-disabled,
+);
+
+// 默认大小
+$btn-padding-y: 0;
+$btn-padding-x: 16px;
+$btn-height: 40px;
+$btn-font-size: 14px;
+$btn-width: 120px;
+
+// 小按钮
+$btn-padding-y-small: 0;
+$btn-padding-x-small: 8px;
+$btn-height-small: 24px;
+$btn-font-size-small: 13px;
+$btn-width-smal: auto;
+
+// 大按钮
+$btn-padding-y-large: 0;
+$btn-padding-x-large: 24px;
+$btn-height-large: 50px;
+$btn-font-size-large: 16px;
+$btn-width-large: 180px;
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: #cccccc;
+  vertical-align: middle;
+  user-select: none;
+  border: 0 solid transparent;
+  color: #333;
+  outline: none;
+  font-family: 'Din Pro', Arial, 'Microsoft YaHei', Helvetica, 'Heiti SC', HelveticaNeue;
+  transition: all 0.3s linear;
+  @include button-size(
+    $width: $btn-width,
+    $height: $btn-height,
+    $font-size: $btn-font-size,
+    $padding-x: $btn-padding-x,
+    $padding-y: $btn-padding-y
+  );
+  &[disabled] {
+    background: $btn-disabled;
+    cursor: not-allowed;
+    &:hover {
+      background: $btn-disabled;
+    }
+  }
+  &.btn-loading {
+    background: $btn-disabled !important;
+    cursor: not-allowed;
+    &:before {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: -1px;
+      animation: loadingCircle 1s infinite linear;
+      @include iconfont('\e612', 22px, #fff);
+    }
+    @keyframes loadingCircle {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.btn-small {
+  @include button-size(
+    $width: $btn-width-smal,
+    $height: $btn-height-small,
+    $font-size: $btn-font-size-small,
+    $padding-x: $btn-padding-x-small,
+    $padding-y: $btn-padding-y-small
+  );
+}
+
+.btn-large {
+  @include button-size(
+    $width: $btn-width-large,
+    $height: $btn-height-large,
+    $font-size: $btn-font-size-large,
+    $padding-x: $btn-padding-x-large,
+    $padding-y: $btn-padding-y-large
+  );
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* 按钮颜色 */
+@each $key, $value in $btn-theme-map {
+  .btn-#{$key} {
+    background: $value;
+    color: #fff;
+    &:hover {
+      background: darken($value, 10%);
+    }
+  }
+}
