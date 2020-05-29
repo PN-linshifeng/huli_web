@@ -1,0 +1,7 @@
+
+src/assets
+src/views/User/Components/vue-cropper
+node_modules
+dist
+git
+mocker

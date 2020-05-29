@@ -1,0 +1,29 @@
+.main-wrap {
+  margin-bottom: 20px !important;
+  overflow: hidden;
+}
+.main-left {
+  // position: fixed;
+  // height: 100vh;
+  // background: #ffffff;
+  padding-right: 24/16 * 1rem;
+}
+.main-right {
+  overflow: hidden;
+  // padding-bottom: 125rem /* 2000/16 */;
+  // margin-bottom: -125rem;
+  .main-height {
+    min-height: 700px;
+    background: #ffffff;
+  }
+  .card {
+    margin-bottom: 20px;
+    padding: 1.5rem 1rem;
+    background: #ffffff;
+    overflow: hidden;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  // background: #ffffff;
+}

@@ -1,0 +1,26 @@
+// ie table有bug
+.el-table__header {
+  width: 100% !important;
+}
+.el-table__body {
+  width: 100% !important;
+}
+.el-input,
+.el-button {
+  font-size: 14/16 * 1rem;
+}
+
+@include phoneVertical {
+  .el-scrollbar {
+    min-width: 100px;
+    .el-cascader-node {
+      padding: 0 1rem;
+    }
+  }
+  .el-pagination__jump {
+    display: none !important;
+  }
+  .el-pagination {
+    text-align: center;
+  }
+}

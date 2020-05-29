@@ -1,0 +1,96 @@
+.step {
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 24/16 * 1rem;
+  padding: 1rem 0;
+  ul {
+    position: relative;
+    overflow: hidden;
+    li {
+      position: relative;
+      float: left;
+      width: 25%;
+      text-align: center;
+      color: #999;
+      .txt {
+        .radius {
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          background: #c0c4cc;
+          color: initial;
+          border-radius: 9px;
+          font-style: normal;
+          margin-right: 8px;
+          font-size: 12px;
+          color: #fff;
+        }
+        i {
+          display: none;
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .end {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:last-child {
+        .end {
+          display: none;
+        }
+      }
+      &.active {
+        color: #fc4545;
+        .txt {
+          .radius {
+            background: #fc4545;
+          }
+        }
+        .end {
+          color: #999;
+        }
+      }
+      &.ok {
+        color: #67c23a;
+        .txt {
+          .radius {
+            background: #67c23a;
+          }
+        }
+        .end {
+          color: #67c23a;
+        }
+      }
+    }
+  }
+  @include phoneVertical {
+    font-size: 1.3rem;
+    ul {
+      .end {
+        display: none;
+      }
+      li {
+        width: 100%;
+        text-align: left;
+        display: none;
+
+        &.is-success,
+        &.active {
+          display: block;
+        }
+      }
+      .radius {
+        width: auto !important;
+        padding: 0 8px;
+        i {
+          display: inline !important;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}

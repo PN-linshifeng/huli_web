@@ -1,0 +1,70 @@
+@import './_theme.scss';
+@import './_html5.scss';
+// @import './_index.scss';
+// @import './_news.scss';
+
+body {
+  font-family: 'Microsoft YaHei', Arial, Helvetica, 'Heiti SC', HelveticaNeue;
+  background: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*-webkit-overflow-scrolling: touch;*/
+  &.i18n-en {
+    font-family: Arial;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #333333;
+}
+
+img {
+  border: 0px;
+}
+
+i {
+  font-style: normal;
+}
+
+.container-full {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+.g-container:after,
+.g-container:before {
+  display: block;
+  content: '';
+  height: 0px;
+  overflow: hidden;
+  clear: both;
+}
+
+.margin-block {
+  margin-bottom: 50/16 * 1rem;
+}
+
+@include ipad-up {
+  .hidden-ipad-up {
+    display: none;
+  }
+}
+
+@include ipad {
+  .hidden-ipad-down {
+    display: none;
+  }
+}

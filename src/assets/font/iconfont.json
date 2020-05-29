@@ -1,0 +1,156 @@
+{
+  "id": "1831120",
+  "name": "狐狸",
+  "font_family": "iconfont",
+  "css_prefix_text": "huli",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14830004",
+      "name": "income_total",
+      "font_class": "zu2717",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "14830005",
+      "name": "income_left",
+      "font_class": "zu2719",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "14830006",
+      "name": "income_settle",
+      "font_class": "zu2718",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "14829757",
+      "name": "resetsuccess",
+      "font_class": "zu24831",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "14829437",
+      "name": "nextstep",
+      "font_class": "zu2483",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "14828558",
+      "name": "send",
+      "font_class": "zu2493",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "14826435",
+      "name": "username",
+      "font_class": "zu2470",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "14826436",
+      "name": "password",
+      "font_class": "zu2469",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "14826307",
+      "name": "hasmessage",
+      "font_class": "zu25271",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "14825859",
+      "name": "messege",
+      "font_class": "zu2527",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "14825860",
+      "name": "level-1",
+      "font_class": "zu26741",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "14825864",
+      "name": "welfare",
+      "font_class": "zu25261",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "14825181",
+      "name": "组 help",
+      "font_class": "zu2521",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "14825182",
+      "name": "works",
+      "font_class": "zu2517",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "14825183",
+      "name": "data",
+      "font_class": "zu2518",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "14825186",
+      "name": "integral",
+      "font_class": "zu2520",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "14825189",
+      "name": "grade",
+      "font_class": "zu2674",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "14825190",
+      "name": "workbench",
+      "font_class": "zu2516",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "14825191",
+      "name": "income",
+      "font_class": "zu2519",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "14825038",
+      "name": "edit",
+      "font_class": "zu2491",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "14824919",
+      "name": "recovery",
+      "font_class": "recovery",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}

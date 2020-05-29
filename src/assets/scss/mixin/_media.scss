@@ -1,0 +1,56 @@
+@mixin media($min-width: 320px, $max-width: 1920px) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin phone($min-width: 320px, $max-width: 763px) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin ipad($min-width: 320px, $max-width: 768px) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin ipad-up($min-width: 769px) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin phoneVertical($max-width: 577px) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}

@@ -1,0 +1,117 @@
+// 底部
+.hl-footer {
+  background: #282828;
+  color: #7c7c7c;
+  font-size: 14/16 * 1rem;
+  .container {
+    overflow: hidden;
+  }
+  .link-box {
+    padding: 80/16 * 1rem 10px;
+  }
+  .left {
+    overflow: hidden;
+    .item {
+      float: left;
+      margin-right: 8%;
+    }
+    h3 {
+      color: #fff;
+      font-size: inherit;
+      margin-bottom: 0.8rem;
+    }
+    li {
+      padding-bottom: 0.5rem;
+    }
+    a {
+      font-size: 12/16 * 1rem;
+      color: inherit;
+    }
+  }
+  .right {
+    float: right;
+    text-align: right;
+  }
+  .share {
+    margin-bottom: 1rem;
+    a {
+      margin: 0 15px 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid #444343;
+    padding: 1rem 0;
+  }
+}
+@include ipad {
+  .hl-footer {
+    .link-box {
+      padding: 35/16 * 1rem 10px;
+    }
+    h3 {
+      font-size: inherit;
+      font-weight: bold;
+    }
+    .left {
+    }
+    .right {
+      float: none;
+      text-align: left;
+      h3,
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-left: 0;
+      }
+      img {
+        width: 28px;
+      }
+    }
+  }
+}
+
+@include phoneVertical {
+  .hl-footer {
+    .left {
+      .item {
+        width: 100%;
+        float: none;
+        &.active {
+          ul {
+            display: block;
+          }
+          h3 {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        h3 {
+          position: relative;
+          &::after {
+            font-family: element-icons !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            content: '\e6df';
+            transition: all 0.3s linear;
+          }
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+    .copyright {
+      text-align: center;
+    }
+  }
+}
