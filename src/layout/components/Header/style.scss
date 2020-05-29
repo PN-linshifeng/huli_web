@@ -1,9 +1,8 @@
 .hl-header {
-  position: relative;
+  position: fixed;
   z-index: 9;
   height: 100px;
   line-height: 100px;
-  margin-bottom: -100px;
   color: #ffffff;
   transition: background 0.3s linear;
   .container {

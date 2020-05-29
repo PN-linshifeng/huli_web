@@ -56,7 +56,7 @@ export default {
         // prevButton: '.swiper-button-prev',
         // nextButton: '.swiper-button-next',
         // scrollbar: '.swiper-scrollbar',
-        mousewheelControl: true,
+        // mousewheelControl: true,
         observeParents: true,
         // slidesPerView: 4,
         // slidesPerGroup: 1,
