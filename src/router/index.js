@@ -40,6 +40,11 @@ export const constantRoutes = [
         name: 'index',
         component: () => import('@/views/Home/Index.vue'), // 工作台
       },
+      {
+        path: '/product',
+        name: '/product',
+        component: () => import('@/views/Home/Index.vue'), // 工作台
+      },
     ],
   },
 

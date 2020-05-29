@@ -1,9 +1,9 @@
 <template>
   <div class="index-banner margin-block container-full">
     <swiper
+      ref="mySwiper"
       :options="swiperOption"
       :not-next-tick="notNextTick"
-      ref="mySwiper"
       style="height:400px"
     >
       <!-- slides -->
@@ -28,7 +28,7 @@
 
       <!-- Optional controls -->
 
-      <div class="swiper-pagination" slot="pagination"></div>
+      <div slot="pagination" class="swiper-pagination" />
     </swiper>
   </div>
 </template>
@@ -38,7 +38,11 @@ require('swiper/dist/css/swiper.css');
 import './style.scss';
 
 export default {
-  name: 'carrousel',
+  name: 'Carrousel',
+  components: {
+    swiper,
+    swiperSlide,
+  },
   data() {
     return {
       // NotNextTick is a component's own property, and if notNextTick is set to true, the component will not instantiate the swiper through NextTick, which means you can get the swiper object the first time (if you need to use the get swiper object to do what Things, then this property must be true)
@@ -66,16 +70,12 @@ export default {
         // swiper callbacks
         // swiper的各种回调函数也可以出现在这个对象中，和swiper官方一样
         onTransitionStart(swiper) {
-          console.log(swiper);
+          // console.log(swiper);
         },
         // more Swiper configs and callbacks...
         // ...
       },
     };
-  },
-  components: {
-    swiper,
-    swiperSlide,
   },
   // you can find current swiper instance object like this, while the notNextTick property value must be true
   // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true

@@ -1,5 +1,5 @@
 <template>
-  <header class="container-full hl-header">
+  <header class="container-full hl-header" :class="{menuColor,fixedTop}">
     <div class="container">
       <div class="hl-logo">
         <a href="/" title="狐狸小说">
@@ -8,47 +8,26 @@
       </div>
 
       <div class="hl-mian">
-        <input type="checkbox" v-model="showNav" id="checkboxNav" hidden />
+        <input id="checkboxNav" v-model="showNav" type="checkbox" hidden />
         <nav class="hl-nav">
           <label for="checkboxNav" class="hidden-ipad-up">
-            <i class="el-icon-close"></i>
+            <i class="el-icon-close" />
           </label>
           <ul>
-            <li @click.stop="handleShow('1')">
-              <router-link to="/" @click.native="handleShowNav">首页</router-link>
-            </li>
-            <li
-              class="el-has-child"
-              :class="showChild.indexOf('2')>=0?'active':''"
-              @click.stop="handleShow('2')"
-            >
-              <a title="产品中心">产品中心</a>
-              <ul>
-                <li class="hl-yiqikanshu">
-                  <router-link to="/" @click.native="handleShowNav">一起看书</router-link>
-                </li>
-                <li class="hl-meida">
-                  <router-link to="/" @click.native="handleShowNav">美哒私聊</router-link>
+            <li v-for="(k,i) in menu" :key="k.title" :class="{active:activeIndex===(i+1),'el-has-child':k.child,'hl-open':showChild.indexOf(i+1)>=0}">
+              <router-link v-if="k.path" :to="k.path" @click.native="handleShowNav">{{ k.title }}</router-link>
+              <a v-else @click.stop="handleShow(i+1)">{{ k.title }}</a>
+              <ul v-if="k.child">
+                <li v-for="kk in k.child" :key="kk.title" :class="kk.class">
+                  <router-link :to="kk.path" @click.native="handleShowNav">{{ kk.title }}</router-link>
                 </li>
               </ul>
-            </li>
-            <li @click.stop="handleShow('3')">
-              <router-link to="/" @click.native="handleShowNav">新闻动态</router-link>
-            </li>
-            <li @click.stop="handleShow('4')">
-              <router-link to="/" @click.native="handleShowNav">关于我们</router-link>
-            </li>
-            <li @click.stop="handleShow('5')">
-              <router-link to="/" @click.native="handleShowNav">加入我们</router-link>
-            </li>
-            <li @click.stop="handleShow('6')">
-              <router-link to="/" @click.native="handleShowNav">联系我们</router-link>
             </li>
           </ul>
           <div class="hl-copy hidden-ipad-up">Copyright © 2020 狐狸文化传媒</div>
         </nav>
         <label for="checkboxNav" class="hidden-ipad-up">
-          <i class="el-icon-s-unfold"></i>
+          <i class="el-icon-s-unfold" />
         </label>
       </div>
     </div>
@@ -56,33 +35,80 @@
 </template>
 <script>
 import './style.scss';
+const menu = [
+  { title: '首页', path: '/' },
+  {
+    title: '产品',
+    // path: '/product',
+    child: [
+      { title: '一起看书', path: '/', class: 'hl-yiqikanshu' },
+      { title: '美哒私聊', path: '/', class: 'hl-meida' },
+    ],
+  },
+  { title: '新闻动态', path: '/' },
+  { title: '关于我们', path: '/' },
+  { title: '加入我们', path: '/' },
+  { title: '联系我们', path: '/' },
+];
 
 export default {
   data() {
     return {
       activeIndex: '1', // 当前切换
       showChild: [], // 显示下拉
-      showNav: true, // 收显示nav
+      showNav: false, // 收显示nav
+      menu,
+      menuColor: '',
+      fixedTop: '',
+      scrollTop: '',
     };
+  },
+  computed: {
+
+  },
+  watch: {
+    $route(to, from) {
+      if (to.path === '/product') {
+        this.menuColor = 'hl-block'
+      } else {
+        this.menuColor = ''
+      }
+    },
+    scrollTop: function scroll() {
+      if (this.scrollTop >= 100) {
+        this.fixedTop = true
+      } else {
+        this.fixedTop = '';
+      }
+    }
   },
   mounted: function() {
     window.onclick = () => {
       this.showChild = [];
     };
+    window.onscroll = () => {
+      this.scrollTop = document.documentElement.scrollTop;
+      // console.log(this.scrollTop)
+    }
   },
   methods: {
     handleShow(index) {
       const flaIndex = this.showChild.indexOf(index);
+
       if (flaIndex >= 0) {
         this.showChild.splice(flaIndex, 1);
+      } else if (document.documentElement.clientWidth >= 768) {
+        this.showChild = [index];
       } else {
         this.showChild.push(index);
       }
+
       this.activeIndex = index;
+      console.log(flaIndex, index, this.showChild)
     },
     handleShowNav() {
       this.showNav = !this.showNav;
     },
-  },
+  }
 };
 </script>
