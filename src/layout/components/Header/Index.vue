@@ -15,11 +15,11 @@
           </label>
           <ul>
             <li v-for="(k,i) in menu" :key="k.title" :class="{active:activeIndex===(i+1),'el-has-child':k.child,'hl-open':showChild.indexOf(i+1)>=0}">
-              <router-link v-if="k.path" :to="k.path" @click.native="handleShowNav">{{ k.title }}</router-link>
-              <a v-else @click.stop="handleShow(i+1)">{{ k.title }}</a>
+              <router-link v-if="k.path" :to="k.path" @click.native="handleSetActive(i+1)">{{ k.title }}</router-link>
+              <a v-else @click.stop="handleSwitchChild(i+1)">{{ k.title }}</a>
               <ul v-if="k.child">
                 <li v-for="kk in k.child" :key="kk.title" :class="kk.class">
-                  <router-link :to="kk.path" @click.native="handleShowNav">{{ kk.title }}</router-link>
+                  <router-link :to="kk.path" @click.native="handleSetActive(i+1)">{{ kk.title }}</router-link>
                 </li>
               </ul>
             </li>
@@ -86,7 +86,7 @@ export default {
     }
   },
   methods: {
-    handleShow(index) {
+    handleSwitchChild(index) {
       const flaIndex = this.showChild.indexOf(index);
 
       if (flaIndex >= 0) {
@@ -96,11 +96,10 @@ export default {
       } else {
         this.showChild.push(index);
       }
-
-      this.activeIndex = index;
     },
-    handleShowNav() {
+    handleSetActive(index) {
       this.showNav = !this.showNav;
+      this.activeIndex = index;
     },
   }
 };
