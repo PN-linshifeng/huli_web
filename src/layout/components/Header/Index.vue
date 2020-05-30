@@ -1,5 +1,5 @@
 <template>
-  <header class="container-full hl-header" :class="{menuColor,fixedTop}">
+  <header class="container-full hl-header" :class="{menuColor,fixedTop:scrollTop>=100}">
     <div class="container">
       <div class="hl-logo">
         <a href="/" title="狐狸小说">
@@ -41,7 +41,7 @@ const menu = [
     title: '产品',
     // path: '/product',
     child: [
-      { title: '一起看书', path: '/', class: 'hl-yiqikanshu' },
+      { title: '一起看书', path: '/product', class: 'hl-yiqikanshu' },
       { title: '美哒私聊', path: '/', class: 'hl-meida' },
     ],
   },
@@ -74,21 +74,15 @@ export default {
         this.menuColor = ''
       }
     },
-    scrollTop: function scroll() {
-      if (this.scrollTop >= 100) {
-        this.fixedTop = true
-      } else {
-        this.fixedTop = '';
-      }
-    }
   },
   mounted: function() {
     window.onclick = () => {
       this.showChild = [];
     };
-    window.onscroll = () => {
-      this.scrollTop = document.documentElement.scrollTop;
-      // console.log(this.scrollTop)
+
+    document.body.onscroll = () => {
+      const scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+      this.scrollTop = scrollTop;
     }
   },
   methods: {
@@ -104,7 +98,6 @@ export default {
       }
 
       this.activeIndex = index;
-      console.log(flaIndex, index, this.showChild)
     },
     handleShowNav() {
       this.showNav = !this.showNav;
