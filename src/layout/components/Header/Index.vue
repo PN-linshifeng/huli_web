@@ -77,23 +77,7 @@ const menu = [
   },
   { title: '关于我们', path: '/aboutus' },
   { title: '加入我们', path: '/joinus' },
-  { title: '联系我们', path: '/contractus' },
-  {
-    title: '新闻动态',
-    path: '/news',
-    hiddenChild: true,
-    child: [
-      {
-        title: '新闻内容',
-        path: '/news/:id',
-        class: 'hl-yiqikanshu',
-        hidden: true,
-      },
-    ],
-  },
-  { title: '关于我们', path: '/about' },
-  { title: '加入我们', path: '/join' },
-  { title: '联系我们', path: '/contact' }
+  { title: '联系我们', path: '/contractus' }
 ];
 
 const dfs = function a(data, path) {
