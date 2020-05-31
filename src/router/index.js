@@ -32,13 +32,38 @@ export const constantRoutes = [
   {
     path: '/',
     // name: '首页', 出现警告所以注释
-    redirect: { name: 'index' }, // 如果不做重定向控制台会警告
+    redirect: { name: '/index' }, // 如果不做重定向控制台会警告
     component: BaseLayout, // 公共页头页尾
     children: [
       {
         path: '/index',
-        name: 'index',
-        component: () => import('@/views/Home/Index.vue'), // 首页
+        name: '/index',
+        component: () => import('@/views/Home/Index.vue'), // s
+      },
+      {
+        path: '/news/:id',
+        name: '/news/:id',
+        component: () => import('@/views/Home/Index.vue'), // 工作台
+      },
+      {
+        path: '/news',
+        name: '/news',
+        component: () => import('@/views/Home/Index.vue'), // 工作台
+      },
+      {
+        path: '/about',
+        name: '/about',
+        component: () => import('@/views/Home/Index.vue'), // 工作台
+      },
+      {
+        path: '/contact',
+        name: '/contact',
+        component: () => import('@/views/Home/Index.vue'), // 工作台
+      },
+      {
+        path: '/join',
+        name: '/join',
+        component: () => import('@/views/Home/Index.vue'), // 工作台
       },
       {
         path: '/products/books',

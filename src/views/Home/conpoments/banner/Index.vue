@@ -1,11 +1,6 @@
 <template>
   <div class="index-banner margin-block container-full">
-    <swiper
-      ref="mySwiper"
-      :options="swiperOption"
-      :not-next-tick="notNextTick"
-      style="height:400px"
-    >
+    <swiper ref="mySwiper" :options="swiperOption" :not-next-tick="notNextTick">
       <!-- slides -->
       <swiper-slide>
         <div class="content">

@@ -4,13 +4,8 @@
       <h3>联系我们</h3>
     </div>
     <!-- 地图 -->
-    <!-- <div class="map-view hidden-sm-and-up"> -->
-    <div class="map-view">
+    <div class="map-view hidden-sm-and-up">
       <el-amap vid="amap" :plugin="plugin" class="amap-demo" :center="center" />
-      <div class="toolbar">
-        <span v-if="loaded">location: lng = {{ lng }} lat = {{ lat }}</span>
-        <span v-else>正在定位</span>
-      </div>
     </div>
     <div class="contract-layout">
       <div class="content">
