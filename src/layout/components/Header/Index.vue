@@ -58,8 +58,8 @@ const menu = [
     title: '产品',
     // path: '/product',
     child: [
-      { title: '一起看书', path: '/product', class: 'hl-yiqikanshu' },
-      { title: '美哒私聊', path: '/', class: 'hl-meida' },
+      { title: '一起看书', path: '/products/books', class: 'hl-yiqikanshu' },
+      { title: '美哒私聊', path: '/products/privatechat', class: 'hl-meida' },
     ],
   },
   {
@@ -75,9 +75,9 @@ const menu = [
       },
     ],
   },
-  { title: '关于我们', path: '/about' },
-  { title: '加入我们', path: '/join' },
-  { title: '联系我们', path: '/contact' },
+  { title: '关于我们', path: '/aboutus' },
+  { title: '加入我们', path: '/joinus' },
+  { title: '联系我们', path: '/contractus' }
 ];
 
 const dfs = function a(data, path) {

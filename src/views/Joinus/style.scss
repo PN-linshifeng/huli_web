@@ -1,0 +1,60 @@
+.join-us {
+  background-color: #fafafa;
+  padding-bottom: 6.25rem /* 100/16 */;
+  @include phoneVertical {
+    padding-bottom: 0;
+  }
+  .title-bg {
+    height: 25rem /* 400/16 */;
+    line-height: 25rem;
+    text-align: center;
+    color: #fff;
+    background: url(../../assets/images/joinus_banner.png) no-repeat center top;
+    background-size: cover;
+    @include phoneVertical {
+      height: 17rem /* 400/16 */;
+      line-height: 17rem;
+    }
+  }
+  .contract-layout {
+    max-width: 75rem /* 1200/16 */;
+    margin: -4rem auto 0;
+    background-color: #fff;
+    .content {
+      position: relative;
+      padding: 3rem 4rem;
+      @include phoneVertical {
+        padding: 2rem 1rem;
+      }
+      .el-collapse-item__header {
+        height: 5rem;
+        line-height: 5rem;
+      }
+      .job-name {
+        font-weight: normal;
+      }
+      .creat-time {
+        position: absolute;
+        right: 8rem;
+        font-size: 0.75rem;
+        color: #757575;
+        @include phoneVertical {
+          right: 4rem;
+        }
+      }
+      .content-item {
+        margin-top: 2.5rem;
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+        p {
+          font-size: 0.75rem;
+          color: #757575;
+        }
+      }
+      .yellow-text {
+        color: #ff6b00;
+      }
+    }
+  }
+}

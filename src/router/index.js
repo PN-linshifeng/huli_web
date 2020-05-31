@@ -51,24 +51,29 @@ export const constantRoutes = [
         component: () => import('@/views/Home/Index.vue'), // 工作台
       },
       {
-        path: '/about',
-        name: '/about',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
+        path: '/products/books',
+        name: 'books',
+        component: () => import('@/views/Products/Books/Index.vue'), // 一起看书
       },
       {
-        path: '/contact',
-        name: '/contact',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
+        path: '/products/privatechat',
+        name: 'privatechat',
+        component: () => import('@/views/Products/PrivateChat/Index.vue'), // 美哒私聊
       },
       {
-        path: '/join',
-        name: '/join',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
+        path: '/aboutus',
+        name: 'aboutus',
+        component: () => import('@/views/Aboutus/Index.vue'), // 关于我们
       },
       {
-        path: '/product',
-        name: '/product',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
+        path: '/contractus',
+        name: 'contractus',
+        component: () => import('@/views/Contractus/Index.vue'), // 联系我们
+      },
+      {
+        path: '/joinus',
+        name: 'joinus',
+        component: () => import('@/views/Joinus/Index.vue'), // 加入我们
       },
     ],
   },
