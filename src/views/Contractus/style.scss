@@ -16,14 +16,9 @@
       line-height: 17rem;
     }
   }
-  .map-view {
+  #allmap {
+    width: 100%;
     height: 300px;
-    padding: 4rem 1rem;
-    background-color: #fff;
-    .amap-logo,
-    .amap-geolocation-con {
-      z-index: 1 !important;
-    }
   }
   .contract-layout {
     max-width: 75rem /* 1200/16 */;
