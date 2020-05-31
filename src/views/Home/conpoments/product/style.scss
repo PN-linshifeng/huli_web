@@ -1,0 +1,88 @@
+.hl-index-product {
+  overflow: hidden;
+  background: #fcfcfc;
+  padding-top: 50/16 * 1rem;
+  h3 {
+    font-size: 30/16 * 1rem;
+    margin-bottom: 20/16 * 1rem;
+    text-align: center;
+  }
+  .tabs {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 50/16 * 1rem;
+    span {
+      display: inline-block;
+      width: 115px;
+      line-height: 40px;
+      font-size: 1rem;
+      border: 1px solid #e2e2e2;
+      cursor: pointer;
+      &:nth-child(1) {
+        border-right: none;
+        border-radius: 5px 0px 0px 5px;
+      }
+      &:nth-child(2) {
+        border-left: none;
+        border-radius: 0px 5px 5px 0px;
+      }
+    }
+    .active {
+      background: $theme-color;
+      color: #fff;
+    }
+  }
+  .content {
+    .txt {
+      width: 50%;
+      float: left;
+      margin-top: 120/16 * 1rem;
+      overflow: hidden;
+      h3 {
+        text-align: left;
+      }
+      p {
+        max-width: 350px;
+        margin-bottom: 20/16 * 1rem;
+      }
+      a {
+        display: inline-block;
+        width: 160/16 * 1rem;
+        height: 40/16 * 1rem;
+        line-height: 40/16 * 1rem;
+        text-align: center;
+        border: 1px solid $theme-color;
+        color: $theme-color;
+        border-radius: 20/16 * 1rem;
+      }
+    }
+    .img {
+      width: 50%;
+      float: left;
+      line-height: 0;
+    }
+  }
+  @include phoneVertical {
+    text-align: center;
+    .txt {
+      float: none !important;
+      width: 100% !important;
+      margin-top: 0 !important;
+      margin-bottom: 1rem;
+
+      h3 {
+        text-align: center !important;
+      }
+      p {
+        max-width: 100% !important;
+      }
+    }
+    .img {
+      width: 100% !important;
+      float: none !important;
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

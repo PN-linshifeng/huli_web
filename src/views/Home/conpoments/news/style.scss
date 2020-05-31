@@ -1,0 +1,20 @@
+.hl-index-new {
+  padding-top: 50/16 * 1rem;
+  padding-bottom: 80/16 * 1rem;
+  background: #fcfcfc;
+
+  .container {
+    overflow: hidden;
+  }
+  @include phoneVertical {
+    .hl-news-list {
+      overflow: auto;
+      ul {
+        width: 250 * 3px;
+        li {
+          width: 250px;
+        }
+      }
+    }
+  }
+}

@@ -129,10 +129,11 @@
         display: none;
       }
     }
-    .nav {
-      ul {
-        a {
+    .hl-nav {
+      > ul {
+        li > a {
           &:after {
+            top: 50px;
             background: #333333;
           }
         }
