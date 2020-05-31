@@ -9,47 +9,16 @@
     </div>
     <div class="container">
       <div class="box">
-        <h3>全版权运营</h3>
+        <h3>{{ title }}</h3>
         <p>
-          《武极仙》你是否有个武侠梦？你是否幻想过飞檐走壁、开山裂石？浩瀚的星海，星辰幻灭，暗无天地，星辰的颤抖与崩碎，星系的挪移变换，平静下暗藏着什么样的
-          波涛？
+          {{ des }}
         </p>
         <div class="content">
           <swiper ref="mySwiper" :options="swiperOption" :not-next-tick="notNextTick" class="book">
             <!-- slides -->
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a href="#">
-                <img src="../../../../assets/images/hs/104.png" />
+            <swiper-slide v-for="k in data" :key="k.id">
+              <a :href="k.path" target="_blank">
+                <img :src="k.img" />
               </a>
             </swiper-slide>
 
@@ -73,6 +42,22 @@ export default {
   components: {
     swiper,
     swiperSlide,
+  },
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+    des: {
+      type: String,
+      default: '',
+    },
+    data: {
+      type: Array,
+      default: function de() {
+        return [];
+      },
+    },
   },
   data() {
     return {
