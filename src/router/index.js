@@ -51,21 +51,6 @@ export const constantRoutes = [
         component: () => import('@/views/Home/Index.vue'), // 工作台
       },
       {
-        path: '/about',
-        name: '/about',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
-      },
-      {
-        path: '/contact',
-        name: '/contact',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
-      },
-      {
-        path: '/join',
-        name: '/join',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
-      },
-      {
         path: '/products/books',
         name: 'books',
         component: () => import('@/views/Products/Books/Index.vue'), // 一起看书
