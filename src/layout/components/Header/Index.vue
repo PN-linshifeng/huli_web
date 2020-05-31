@@ -53,31 +53,34 @@
 import './style.scss';
 
 const menu = [
-  { title: '首页', path: '/index' },
+  { title: '首页', path: '/index', name: 'index' },
   {
     title: '产品',
     // path: '/product',
+    name: 'product',
     child: [
-      { title: '一起看书', path: '/products/books', class: 'hl-yiqikanshu' },
-      { title: '美哒私聊', path: '/products/privatechat', class: 'hl-meida' },
+      { title: '一起看书', path: '/products/books', name: 'books', class: 'hl-yiqikanshu' },
+      { title: '美哒私聊', path: '/products/privatechat', name: 'privatechat', class: 'hl-meida' },
     ],
   },
   {
     title: '新闻动态',
     path: '/news',
+    name: 'news',
     hiddenChild: true,
     child: [
       {
         title: '新闻内容',
         path: '/news/:id',
+        name: 'news content',
         class: 'hl-yiqikanshu',
         hidden: true,
       },
     ],
   },
-  { title: '关于我们', path: '/aboutus' },
-  { title: '加入我们', path: '/joinus' },
-  { title: '联系我们', path: '/contractus' }
+  { title: '关于我们', path: '/aboutus', name: 'aboutus' },
+  { title: '加入我们', path: '/joinus', name: 'joinus' },
+  { title: '联系我们', path: '/contractus', name: 'contractus' },
 ];
 
 const dfs = function a(data, path) {
@@ -90,7 +93,7 @@ const dfs = function a(data, path) {
     --n;
     item.index = item.index || data.length - n;
     find = true;
-    if (item.path === path) {
+    if (item.name === path) {
       find = true;
       indexActive = item.index;
     }

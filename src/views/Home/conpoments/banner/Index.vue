@@ -2,22 +2,11 @@
   <div class="index-banner margin-block container-full">
     <swiper ref="mySwiper" :options="swiperOption" :not-next-tick="notNextTick">
       <!-- slides -->
-      <swiper-slide>
+
+      <swiper-slide v-for="k in data" :key="k.title" :style="{ background: k.img }">
         <div class="content">
-          <h3>想象不止，探索不止</h3>
-          <p>狐狸传媒，文创之路探索无止境</p>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="content">
-          <h3>-想象不止，探索不止-</h3>
-          <p>狐狸传媒，文创之路探索无止境</p>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="content">
-          <h3>--想象不止，探索不止--</h3>
-          <p>狐狸传媒，文创之路探索无止境</p>
+          <h3>{{ k.title }}</h3>
+          <p>{{ k.des }}</p>
         </div>
       </swiper-slide>
 
@@ -37,6 +26,14 @@ export default {
   components: {
     swiper,
     swiperSlide,
+  },
+  props: {
+    data: {
+      type: Array,
+      default: function de() {
+        return [];
+      },
+    },
   },
   data() {
     return {
@@ -72,18 +69,12 @@ export default {
       },
     };
   },
-  // you can find current swiper instance object like this, while the notNextTick property value must be true
-  // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
+
   computed: {
     swiper() {
       return this.$refs.mySwiper.swiper;
     },
   },
-  mounted() {
-    // you can use current swiper instance object to do something(swiper methods)
-    // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
-    console.log('this is current swiper instance object', this.swiper);
-    // this.swiper.slideTo(3, 1000, false);
-  },
+  mounted() {},
 };
 </script>

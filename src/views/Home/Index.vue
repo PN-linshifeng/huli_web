@@ -1,8 +1,8 @@
 <template>
   <div>
-    <banner />
-    <about />
-    <copyright />
+    <banner :data="bannerData" />
+    <about :title="aboutData.title" :des="aboutData.des" :data="aboutData.data" />
+    <copyright :title="copyrightData.title" :des="copyrightData.des" :data="copyrightData.data" />
     <product />
     <cooperation :title="cooperationData.title" :data="cooperationData.data" />
     <news :title="newsData.title" :data="newsData.data" />
@@ -28,6 +28,90 @@ export default {
   },
   data() {
     return {
+      bannerData: [
+        {
+          title: '想象不止，探索不止',
+          des: '狐狸传媒，文创之路探索无止境',
+          img: require('../../assets/images/index-banner-01.jpg'),
+        },
+        {
+          title: '想象不止，探索不止2',
+          des: '狐狸传媒，文创之路探索无止境',
+          img: require('../../assets/images/index-banner-01.jpg'),
+        },
+        {
+          title: '想象不止，探索不止3',
+          des: '狐狸传媒，文创之路探索无止境',
+          img: require('../../assets/images/index-banner-01.jpg'),
+        },
+      ],
+      copyrightData: {
+        title: '全版权运营',
+        des:
+          '《武极仙》你是否有个武侠梦？你是否幻想过飞檐走壁、开山裂石？浩瀚的星海，星辰幻灭，暗无天地，星辰的颤抖与崩碎，星系的挪移变换，平静下暗藏着什么样的波涛？',
+        data: [
+          {
+            id: 1,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+          {
+            id: 2,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+          {
+            id: 3,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+          {
+            id: 4,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+          {
+            id: 5,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+          {
+            id: 6,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+          {
+            id: 7,
+            path: '#',
+            img: require('../../assets/images/hs/104.png'),
+          },
+        ],
+      },
+      aboutData: {
+        title: '关于我们',
+        des:
+          '公司注册资金一亿人民币，是在原赛高集团各业务板块基础上组件的综合性企业集团，旗下拥有地产、酒店、写字楼、商业等多个业务单元，是在经开区创始、发展壮大的知名民营行业，其围绕张家堡环岛打造的熙地港、写字楼、洲际酒店等...',
+        data: [
+          {
+            title: '作者成长',
+            img: require('../../assets/images/index-about-1.png'),
+            des:
+              '完善的原创扶持和作者培养体系，优厚的作者福利，持续性挖掘优秀创作力量，祝你成就笔尖梦想。',
+          },
+          {
+            title: '作者成长2',
+            img: require('../../assets/images/index-about-2.png'),
+            des:
+              '完善的原创扶持和作者培养体系，优厚的作者福利，持续性挖掘优秀创作力量，祝你成就笔尖梦想。',
+          },
+          {
+            title: '作者成长3',
+            img: require('../../assets/images/index-about-3.png'),
+            des:
+              '完善的原创扶持和作者培养体系，优厚的作者福利，持续性挖掘优秀创作力量，祝你成就笔尖梦想。',
+          },
+        ],
+      },
       cooperationData: {
         title: '合作伙伴',
         data: [

@@ -37,17 +37,17 @@ export const constantRoutes = [
     children: [
       {
         path: '/index',
-        name: '/index',
+        name: 'index',
         component: () => import('@/views/Home/Index.vue'), // s
       },
       {
         path: '/news/:id',
-        name: '/news/:id',
+        name: 'news',
         component: () => import('@/views/Home/Index.vue'), // 工作台
       },
       {
         path: '/news',
-        name: '/news',
+        name: 'news content',
         component: () => import('@/views/Home/Index.vue'), // 工作台
       },
       {
