@@ -1,0 +1,133 @@
+.product_books {
+  .swiper-container {
+    width: 100%;
+    height: 640px !important;
+  }
+  .swiper-wrapper {
+    width: 100%;
+    .swiper-slide {
+      height: 640px !important;
+      text-align: center;
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      &:nth-child(1) {
+        //   background: url(../../../../assets/images/index-banner-01.jpg) no-repeat center top;
+          background-size: cover;
+      }
+    }
+    .content {
+      display: inline-block;
+      width: 100%;
+      max-width: 75rem /* 1200/16 */;
+      font-size: 0;
+      vertical-align: middle;
+      text-align: left;
+      @include phoneVertical {
+        text-align: center;
+      }
+      .content-text {
+        padding: 2rem 0;
+        img {
+          max-width: 2rem;
+          margin-right: 0.5rem;
+          vertical-align: middle;
+        }
+      }
+      h2 {
+        font-size: 2.5rem;
+        font-weight: normal;
+      }
+      p {
+        font-size: 1.5rem;
+        @include phoneVertical {
+          font-size: 1rem;
+          margin-top: 2rem;
+        }
+      }
+      .el-button {
+        font-size: 1rem;
+        margin-top: 3rem;
+        @include phoneVertical {
+          margin: 1rem 2rem 0;
+        }
+        img {
+          max-width: 1rem;
+          vertical-align: middle;
+        }
+      }
+      .content-img {
+        @include phoneVertical {
+          text-align: center;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .product_layout {
+    // background-color: #fff;
+    height: 36rem;
+    overflow: hidden;
+    &:nth-child(1) {
+      background-color: #ffa;
+    }
+    .product_content {
+      width: 100%;
+      max-width: 62.5rem;
+      margin: 0 auto;
+      @include phoneVertical {
+        text-align: center;
+      }
+      .content-img {
+        text-align: center;
+        img {
+          max-height: 31rem;
+          margin-top: 6rem;
+          text-align: center;
+          @include phoneVertical {
+            margin-top: 1rem;
+          }
+        }
+      }
+      .content-text {
+        padding: 16rem 6rem;
+        @include phoneVertical {
+          padding: 2rem 0;
+        }
+        h2 {
+          font-weight: normal;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
+
+  .download_layout {
+    padding: 5.625rem 0;
+    text-align: center;
+    @include phoneVertical {
+      padding: 3rem 0;
+    }
+    h2 {
+      font-weight: normal;
+      letter-spacing: 3px;
+      @include phoneVertical {
+        font-size: 1.5rem;
+      }
+    }
+    .download_btns {
+      display: inline-block;
+      margin-top: 2rem;
+      img {
+        max-width: 1rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}

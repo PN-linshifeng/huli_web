@@ -3,6 +3,15 @@
 // @import './_index.scss';
 // @import './_news.scss';
 
+html {
+  line-height: 1.6;
+  font-size: 16px;
+  @include phoneVertical {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
 body {
   font-family: 'Microsoft YaHei', Arial, Helvetica, 'Heiti SC', HelveticaNeue;
   background: #fff;

@@ -41,14 +41,14 @@ const menu = [
     title: '产品',
     // path: '/product',
     child: [
-      { title: '一起看书', path: '/product', class: 'hl-yiqikanshu' },
-      { title: '美哒私聊', path: '/', class: 'hl-meida' },
+      { title: '一起看书', path: '/products/books', class: 'hl-yiqikanshu' },
+      { title: '美哒私聊', path: '/products/privatechat', class: 'hl-meida' },
     ],
   },
   { title: '新闻动态', path: '/' },
-  { title: '关于我们', path: '/' },
-  { title: '加入我们', path: '/' },
-  { title: '联系我们', path: '/' },
+  { title: '关于我们', path: '/aboutus' },
+  { title: '加入我们', path: '/joinus' },
+  { title: '联系我们', path: '/contractus' },
 ];
 
 export default {
