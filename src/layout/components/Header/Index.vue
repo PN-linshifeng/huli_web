@@ -108,7 +108,6 @@ function findName(data, name) {
   let value = false;
   function res(data) {
     for (let i = 0; i < data.length; i += 1) {
-      console.log(data[i].name)
       if (data[i].name === name) {
         value = data[i].menuColor;
         return;
@@ -179,7 +178,6 @@ export default {
       this.activeIndex = index;
     },
     setMenuColor(bool, name) {
-      console.log(bool, name);
       if (bool) {
         this.menuColor = true;
       } else {
