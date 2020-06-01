@@ -58,7 +58,7 @@ export default {
           {
             id: 2,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/1586481121.png'),
           },
           {
             id: 3,
@@ -68,12 +68,12 @@ export default {
           {
             id: 4,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/1586481121.png'),
           },
           {
             id: 5,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/1586481121.png'),
           },
           {
             id: 6,

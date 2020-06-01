@@ -1,0 +1,18 @@
+.hl-news-page {
+  overflow: hidden;
+  .hl-news-list {
+    margin-bottom: 1rem;
+  }
+  .el-pagination {
+    text-align: center;
+  }
+  @include phoneVertical {
+    .hl-news-list {
+      ul {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

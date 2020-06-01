@@ -1,5 +1,5 @@
 <template>
-  <header class="container-full hl-header" :class="{ menuColor, fixedTop: scrollTop >= 100 }">
+  <header class="container-full hl-header" :class="{ menuColor, fixedTop }">
     <div class="container">
       <div class="hl-logo">
         <a href="/" title="狐狸小说">
@@ -24,23 +24,21 @@
                   'hl-open': showChild.indexOf(i + 1) >= 0,
                 }"
               >
-                <router-link v-if="k.path" :to="k.path" @click.native.stop="handleSetActive(i + 1)">
-                  {{ k.title }}
-                </router-link>
+                <router-link
+                  v-if="k.path"
+                  :to="k.path"
+                  @click.native.stop="handleSetActive(i + 1)"
+                >{{ k.title }}</router-link>
                 <a v-else @click.stop="handleSwitchChild(i + 1)">{{ k.title }}</a>
                 <ul v-if="k.child && k.child.length > 0 && !k.hiddenChild">
                   <li v-for="kk in k.child" v-show="!kk.hidden" :key="kk.title" :class="kk.class">
-                    <router-link :to="kk.path" @click.native="handleSetActive(i + 1)">
-                      {{ kk.title }}
-                    </router-link>
+                    <router-link :to="kk.path" @click.native="handleSetActive(i + 1)">{{ kk.title }}</router-link>
                   </li>
                 </ul>
               </li>
             </template>
           </ul>
-          <div class="hl-copy hidden-ipad-up">
-            Copyright © 2020 狐狸文化传媒
-          </div>
+          <div class="hl-copy hidden-ipad-up">Copyright © 2020 狐狸文化传媒</div>
         </nav>
         <label for="checkboxNav" class="hidden-ipad-up">
           <i class="el-icon-s-unfold" />
@@ -127,6 +125,14 @@ export default {
         this.menuColor = '';
       }
     },
+    scrollTop() {
+      // console.log(4)
+      if (this.scrollTop >= 100) {
+        this.fixedTop = true
+      } else {
+        this.fixedTop = false
+      }
+    }
   },
   mounted: function a() {
     const { name } = this.$route;
@@ -135,7 +141,7 @@ export default {
       this.showChild = [];
     };
 
-    document.body.onscroll = () => {
+    window.onscroll = () => {
       const scrollTop =
         document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
       this.scrollTop = scrollTop;
@@ -143,7 +149,6 @@ export default {
   },
   methods: {
     handleSwitchChild(index) {
-      console.log(index);
       const flaIndex = this.showChild.indexOf(index);
 
       if (flaIndex >= 0) {
@@ -153,7 +158,6 @@ export default {
       } else {
         this.showChild.push(index);
       }
-      console.log(flaIndex, this.showChild);
     },
     handleSetActive(index) {
       this.handleSwitchChild(index);
