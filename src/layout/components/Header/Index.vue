@@ -51,14 +51,14 @@
 import './style.scss';
 
 const menu = [
-  { title: '首页', path: '/index', name: 'index' },
+  { title: '首页', path: '/index', name: 'index', },
   {
     title: '产品',
     // path: '/product',
     name: 'product',
     child: [
-      { title: '一起看书', path: '/products/books', name: 'books', class: 'hl-yiqikanshu' },
-      { title: '美哒私聊', path: '/products/privatechat', name: 'privatechat', class: 'hl-meida' },
+      { title: '一起看书', path: '/products/books', name: 'books', class: 'hl-yiqikanshu', menuColor: true, },
+      { title: '美哒私聊', path: '/products/privatechat', name: 'privatechat', class: 'hl-meida', menuColor: true, },
     ],
   },
   {
@@ -71,7 +71,7 @@ const menu = [
         title: '新闻内容',
         path: '/news/:id',
         name: 'news content',
-        class: 'hl-yiqikanshu',
+        menuColor: true,
         hidden: true,
       },
     ],
@@ -104,6 +104,24 @@ const dfs = function a(data, path) {
   return indexActive;
 };
 
+function findName(data, name) {
+  let value = false;
+  function res(data) {
+    for (let i = 0; i < data.length; i += 1) {
+      console.log(data[i].name)
+      if (data[i].name === name) {
+        value = data[i].menuColor;
+        return;
+      }
+      if (data[i].child) {
+        res(data[i].child);
+      }
+    }
+  }
+  res(data)
+  return value;
+}
+
 export default {
   data() {
     return {
@@ -118,25 +136,21 @@ export default {
   },
   computed: {},
   watch: {
-    $route(to, from) {
-      if (to.path === '/product') {
-        this.menuColor = 'hl-block';
-      } else {
-        this.menuColor = '';
-      }
+    $route(to) {
+      this.setMenuColor(findName(this.menu, to.name), to.name);
     },
     scrollTop() {
-      // console.log(4)
       if (this.scrollTop >= 100) {
-        this.fixedTop = true
+        this.fixedTop = true;
       } else {
-        this.fixedTop = false
+        this.fixedTop = false;
       }
-    }
+    },
   },
   mounted: function a() {
     const { name } = this.$route;
-    this.activeIndex = dfs(menu, name);
+    this.activeIndex = dfs(this.menu, name);
+    this.setMenuColor(findName(this.menu, name), name);
     window.onclick = () => {
       this.showChild = [];
     };
@@ -163,6 +177,14 @@ export default {
       this.handleSwitchChild(index);
       this.showNav = !this.showNav;
       this.activeIndex = index;
+    },
+    setMenuColor(bool, name) {
+      console.log(bool, name);
+      if (bool) {
+        this.menuColor = true;
+      } else {
+        this.menuColor = false;
+      }
     },
   },
 };
