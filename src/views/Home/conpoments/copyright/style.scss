@@ -22,24 +22,29 @@
     .item {
       width: 100%;
       height: 140px;
-      background: url(../../../../assets/images/copyright-bg.png) repeat-x;
+
       &:nth-child(1) {
+        background: url(../../../../assets/images/home-book-line1.jpg) repeat-x;
         background-position: -500px;
         animation: scrolla 200s linear infinite;
       }
       &:nth-child(2) {
+        background: url(../../../../assets/images/home-book-line2.jpg) repeat-x;
         background-position: -900px;
         animation: scrollc 230s linear infinite;
       }
       &:nth-child(3) {
+        background: url(../../../../assets/images/home-book-line3.jpg) repeat-x;
         background-position: -100px;
         animation: scrollb 250s linear infinite;
       }
       &:nth-child(4) {
+        background: url(../../../../assets/images/home-book-line4.jpg) repeat-x;
         background-position: -0px;
         animation: scrolld 200s linear infinite;
       }
       &:nth-child(5) {
+        background: url(../../../../assets/images/home-book-line5.jpg) repeat-x;
         background-position: -1200px;
         animation: scrolle 220s linear infinite;
       }

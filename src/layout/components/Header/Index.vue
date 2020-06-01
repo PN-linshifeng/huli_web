@@ -2,9 +2,9 @@
   <header class="container-full hl-header" :class="{ menuColor, fixedTop }">
     <div class="container">
       <div class="hl-logo">
-        <a href="/" title="狐狸小说">
+        <router-link to="/index" title="狐狸小说">
           <img src="../../../assets/images/logo.png" alt="狐狸小说logo" />
-        </a>
+        </router-link>
       </div>
 
       <div class="hl-mian">
