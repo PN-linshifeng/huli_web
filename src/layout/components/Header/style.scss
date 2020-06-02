@@ -1,5 +1,6 @@
 .hl-header {
   position: fixed;
+  top: 0;
   z-index: 9;
   height: 100px;
   line-height: 100px;
@@ -66,7 +67,7 @@
           display: none;
           width: 120px;
           position: absolute;
-          top: 80px;
+          // top: 80px;
           left: 50%;
           transform: translateX(-50%);
           padding: 10px;
@@ -74,6 +75,7 @@
           line-height: 1;
           text-align: center;
           border-radius: 5px;
+          box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.5);
 
           a {
             color: #333333;
@@ -111,6 +113,30 @@
       color: #333;
     }
   }
+  &.menuColor {
+    color: #333;
+    .hl-logo {
+      a {
+        display: inline-block;
+        width: 165px;
+        height: 47px;
+        background: url(../../../assets/images/nav-logo-black.png) no-repeat center center;
+        vertical-align: middle;
+      }
+      img {
+        display: none;
+      }
+    }
+    .hl-nav {
+      > ul {
+        li > a {
+          &:after {
+            background: #333333;
+          }
+        }
+      }
+    }
+  }
   &.fixedTop {
     position: fixed;
     height: 70px;
@@ -123,7 +149,7 @@
         display: inline-block;
         width: 165px;
         height: 67px;
-        background: url(../../../assets/images/logo-bg.jpg) no-repeat center center;
+        background: url(../../../assets/images/nav-logo-black.png) no-repeat center center;
       }
       img {
         display: none;
@@ -212,6 +238,7 @@
             padding: 0;
             text-align: left;
             overflow: hidden;
+            box-shadow: none;
           }
         }
       }

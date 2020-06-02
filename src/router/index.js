@@ -42,13 +42,13 @@ export const constantRoutes = [
       },
       {
         path: '/news/:id',
-        name: 'news',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
+        name: 'news content',
+        component: () => import('@/views/News/Content.vue'), // 工作台
       },
       {
         path: '/news',
-        name: 'news content',
-        component: () => import('@/views/Home/Index.vue'), // 工作台
+        name: 'news',
+        component: () => import('@/views/News/List.vue'), // 工作台
       },
       {
         path: '/products/books',

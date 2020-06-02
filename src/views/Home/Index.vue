@@ -53,37 +53,37 @@ export default {
           {
             id: 1,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book1.png'),
           },
           {
             id: 2,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book2.png'),
           },
           {
             id: 3,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book3.png'),
           },
           {
             id: 4,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book4.png'),
           },
           {
             id: 5,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book1.png'),
           },
           {
             id: 6,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book2.png'),
           },
           {
             id: 7,
             path: '#',
-            img: require('../../assets/images/hs/104.png'),
+            img: require('../../assets/images/hs/book3.png'),
           },
         ],
       },
@@ -94,21 +94,21 @@ export default {
         data: [
           {
             title: '作者成长',
-            img: require('../../assets/images/index-about-1.png'),
-            des:
-              '完善的原创扶持和作者培养体系，优厚的作者福利，持续性挖掘优秀创作力量，祝你成就笔尖梦想。',
-          },
-          {
-            title: '作者成长2',
             img: require('../../assets/images/index-about-2.png'),
             des:
               '完善的原创扶持和作者培养体系，优厚的作者福利，持续性挖掘优秀创作力量，祝你成就笔尖梦想。',
           },
           {
-            title: '作者成长3',
+            title: '百万活跃用户',
+            img: require('../../assets/images/index-about-1.png'),
+            des:
+              '以狐狸小说、交友APP为中心，构建多元产品矩阵，打通广泛的内外分发渠道',
+          },
+          {
+            title: '广告渠道',
             img: require('../../assets/images/index-about-3.png'),
             des:
-              '完善的原创扶持和作者培养体系，优厚的作者福利，持续性挖掘优秀创作力量，祝你成就笔尖梦想。',
+              '旗下的广告联盟，覆盖了图文、视频，闪屏、贴片等广告场景，精准定位目标用户，大大提升ROI',
           },
         ],
       },

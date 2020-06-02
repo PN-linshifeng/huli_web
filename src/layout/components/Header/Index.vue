@@ -1,10 +1,10 @@
 <template>
-  <header class="container-full hl-header" :class="{ menuColor, fixedTop: scrollTop >= 100 }">
+  <header class="container-full hl-header" :class="{ menuColor, fixedTop }">
     <div class="container">
       <div class="hl-logo">
-        <a href="/" title="狐狸小说">
+        <router-link to="/index" title="狐狸小说">
           <img src="../../../assets/images/logo.png" alt="狐狸小说logo" />
-        </a>
+        </router-link>
       </div>
 
       <div class="hl-mian">
@@ -24,23 +24,21 @@
                   'hl-open': showChild.indexOf(i + 1) >= 0,
                 }"
               >
-                <router-link v-if="k.path" :to="k.path" @click.native.stop="handleSetActive(i + 1)">
-                  {{ k.title }}
-                </router-link>
+                <router-link
+                  v-if="k.path"
+                  :to="k.path"
+                  @click.native.stop="handleSetActive(i + 1)"
+                >{{ k.title }}</router-link>
                 <a v-else @click.stop="handleSwitchChild(i + 1)">{{ k.title }}</a>
                 <ul v-if="k.child && k.child.length > 0 && !k.hiddenChild">
                   <li v-for="kk in k.child" v-show="!kk.hidden" :key="kk.title" :class="kk.class">
-                    <router-link :to="kk.path" @click.native="handleSetActive(i + 1)">
-                      {{ kk.title }}
-                    </router-link>
+                    <router-link :to="kk.path" @click.native="handleSetActive(i + 1)">{{ kk.title }}</router-link>
                   </li>
                 </ul>
               </li>
             </template>
           </ul>
-          <div class="hl-copy hidden-ipad-up">
-            Copyright © 2020 狐狸文化传媒
-          </div>
+          <div class="hl-copy hidden-ipad-up">Copyright © 2020 狐狸文化传媒</div>
         </nav>
         <label for="checkboxNav" class="hidden-ipad-up">
           <i class="el-icon-s-unfold" />
@@ -53,14 +51,14 @@
 import './style.scss';
 
 const menu = [
-  { title: '首页', path: '/index', name: 'index' },
+  { title: '首页', path: '/index', name: 'index', },
   {
     title: '产品',
     // path: '/product',
     name: 'product',
     child: [
-      { title: '一起看书', path: '/products/books', name: 'books', class: 'hl-yiqikanshu' },
-      { title: '美哒私聊', path: '/products/privatechat', name: 'privatechat', class: 'hl-meida' },
+      { title: '一起看书', path: '/products/books', name: 'books', class: 'hl-yiqikanshu', menuColor: true, },
+      { title: '美哒私聊', path: '/products/privatechat', name: 'privatechat', class: 'hl-meida', menuColor: true, },
     ],
   },
   {
@@ -73,7 +71,7 @@ const menu = [
         title: '新闻内容',
         path: '/news/:id',
         name: 'news content',
-        class: 'hl-yiqikanshu',
+        menuColor: true,
         hidden: true,
       },
     ],
@@ -106,6 +104,23 @@ const dfs = function a(data, path) {
   return indexActive;
 };
 
+function findName(data, name) {
+  let value = false;
+  function res(data) {
+    for (let i = 0; i < data.length; i += 1) {
+      if (data[i].name === name) {
+        value = data[i].menuColor;
+        return;
+      }
+      if (data[i].child) {
+        res(data[i].child);
+      }
+    }
+  }
+  res(data)
+  return value;
+}
+
 export default {
   data() {
     return {
@@ -120,22 +135,26 @@ export default {
   },
   computed: {},
   watch: {
-    $route(to, from) {
-      if (to.path === '/product') {
-        this.menuColor = 'hl-block';
+    $route(to) {
+      this.setMenuColor(findName(this.menu, to.name), to.name);
+    },
+    scrollTop() {
+      if (this.scrollTop >= 100) {
+        this.fixedTop = true;
       } else {
-        this.menuColor = '';
+        this.fixedTop = false;
       }
     },
   },
   mounted: function a() {
     const { name } = this.$route;
-    this.activeIndex = dfs(menu, name);
+    this.activeIndex = dfs(this.menu, name);
+    this.setMenuColor(findName(this.menu, name), name);
     window.onclick = () => {
       this.showChild = [];
     };
 
-    document.body.onscroll = () => {
+    window.onscroll = () => {
       const scrollTop =
         document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
       this.scrollTop = scrollTop;
@@ -143,7 +162,6 @@ export default {
   },
   methods: {
     handleSwitchChild(index) {
-      console.log(index);
       const flaIndex = this.showChild.indexOf(index);
 
       if (flaIndex >= 0) {
@@ -153,12 +171,18 @@ export default {
       } else {
         this.showChild.push(index);
       }
-      console.log(flaIndex, this.showChild);
     },
     handleSetActive(index) {
       this.handleSwitchChild(index);
       this.showNav = !this.showNav;
       this.activeIndex = index;
+    },
+    setMenuColor(bool, name) {
+      if (bool) {
+        this.menuColor = true;
+      } else {
+        this.menuColor = false;
+      }
     },
   },
 };

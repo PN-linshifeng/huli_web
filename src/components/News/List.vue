@@ -9,8 +9,10 @@
           <div class="content">
             <h4>{{ k.title }}</h4>
             <p class="time">{{ k.time }}</p>
-            <p class="description">
-              {{ k.des }}
+            <p class="description">{{ k.des }}</p>
+            <p class="footer">
+              MORE
+              <i class="el-icon-video-play" />
             </p>
           </div>
         </router-link>
