@@ -14,6 +14,11 @@
       ul {
         li {
           width: 100%;
+          text-align: center;
+          a {
+            max-width: 300px;
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -29,6 +34,12 @@
     background: #fafafa;
     line-height: 50/16 * 1rem;
     font-size: 14/16 * 1rem;
+    @include ipad {
+      margin-top: 60px;
+    }
+    @include phoneVertical {
+      margin-top: 0px;
+    }
   }
   .hl-news-content {
     .hl-time-author {

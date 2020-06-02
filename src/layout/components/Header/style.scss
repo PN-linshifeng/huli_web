@@ -142,8 +142,9 @@
     height: 70px;
     line-height: 70px;
     background: #fff;
-    background: rgba(255, 255, 255, 0.8) !important;
-    color: #333;
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #333 !important;
+    box-shadow: 0 0 3px 3px rgba($color: #000000, $alpha: 0.1);
     .hl-logo {
       a {
         display: inline-block;
@@ -175,6 +176,7 @@
     &.fixedTop {
       height: 60px;
       line-height: 60px;
+
       .hl-logo a {
         display: inline-block;
         height: 60px;
@@ -206,6 +208,7 @@
       text-align: left;
       transform: translateX(-100%);
       transition: all 0.3s linear;
+      box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.2);
 
       ul {
         li {
@@ -237,12 +240,14 @@
           }
           ul {
             display: none;
+            width: auto;
             transform: translateX(0);
             position: static;
             padding: 0;
             text-align: left;
             overflow: hidden;
             box-shadow: none;
+            line-height: inherit;
           }
         }
       }
@@ -253,10 +258,12 @@
 
       .hl-copy {
         position: absolute;
+        left: 0;
         bottom: 0;
         width: 100%;
         line-height: 3;
         font-size: 12/16 * 1rem;
+        text-align: center;
       }
     }
   }
