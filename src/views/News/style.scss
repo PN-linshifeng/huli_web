@@ -1,5 +1,8 @@
 .hl-news-page {
   overflow: hidden;
+  .hl-title-bg {
+    background: url(../../assets/images/news-banner-bg.png) no-repeat center center;
+  }
   .hl-news-list {
     margin-bottom: 1rem;
   }
@@ -68,15 +71,13 @@
       width: 32px;
       height: 32px;
       line-height: 32px;
-      border: 1px solid #ccc;
+
       background: #fff;
       border-radius: 50%;
 
       font-size: 0;
       margin-bottom: 10px;
       img {
-        width: 22px;
-        height: auto;
         vertical-align: middle;
       }
     }

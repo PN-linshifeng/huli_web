@@ -1,5 +1,5 @@
 <template>
-  <div class="has-topber has-aside">
+  <div>
     <base-header />
 
     <div>

@@ -142,7 +142,7 @@
     height: 70px;
     line-height: 70px;
     background: #fff;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8) !important;
     color: #333;
     .hl-logo {
       a {
@@ -171,6 +171,7 @@
   .hl-header {
     height: 60px;
     line-height: 60px;
+
     &.fixedTop {
       height: 60px;
       line-height: 60px;
@@ -191,7 +192,9 @@
       line-height: inherit;
     }
     .hl-nav {
+      font-size: 1.25rem;
       position: fixed;
+      z-index: 9999;
       left: 0;
       top: 0px;
       bottom: 0;
@@ -208,6 +211,7 @@
         li {
           width: 100%;
           a {
+            vertical-align: middle;
             &::after {
               display: none;
             }
@@ -258,5 +262,30 @@
   }
   #checkboxNav:checked ~ .hl-nav {
     transform: translateX(0%);
+  }
+}
+
+@include phoneVertical {
+  .hl-header {
+    // position: static;
+    color: #333;
+    background: #fff;
+    &.isIndex {
+      color: #fff;
+      background: none;
+    }
+    &:not(.isIndex) .hl-logo {
+      a {
+        display: inline-block;
+        width: 120px;
+        height: 47px;
+        background: url(../../../assets/images/nav-logo-black.png) no-repeat center center;
+        background-size: 100% auto;
+        vertical-align: middle;
+      }
+      img {
+        display: none;
+      }
+    }
   }
 }

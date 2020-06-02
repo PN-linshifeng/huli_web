@@ -45,6 +45,9 @@ i {
   max-width: 1220px;
   padding: 0px 10px;
   margin: 0 auto;
+  @include phoneVertical {
+    padding: 0px 15px;
+  }
 }
 
 .container:after,
@@ -56,7 +59,7 @@ i {
   clear: both;
 }
 
-.margin-block {
+.hl-margin-block {
   margin-bottom: 50/16 * 1rem;
   @include phoneVertical {
     margin-bottom: 30/16 * 1rem;
@@ -75,6 +78,34 @@ i {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     background: #ff6100;
+  }
+}
+.hl-title-bg {
+  height: 400/16 * 1rem;
+  text-align: center;
+  color: #fff;
+  background-size: cover !important;
+  vertical-align: middle;
+  margin-bottom: 50/16 * 1rem;
+  .content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  h3 {
+    font-size: 40/16 * 1rem;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+  }
+  @include phoneVertical {
+    height: 180/12 * 1rem;
+    h3 {
+      font-size: 25/12 * 1rem;
+    }
   }
 }
 

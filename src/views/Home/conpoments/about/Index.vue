@@ -1,5 +1,5 @@
 <template>
-  <div class="container margin-block hl-index-about">
+  <div class="container hl-margin-block hl-index-about">
     <h3 class="hl-hd-block">{{ title }}</h3>
     <div class="info">
       <p>{{ des }}</p>

@@ -1,5 +1,5 @@
 <template>
-  <header class="container-full hl-header" :class="{ menuColor, fixedTop }">
+  <header class="container-full hl-header" :class="{ menuColor, fixedTop,isIndex }">
     <div class="container">
       <div class="hl-logo">
         <router-link to="/index" title="狐狸小说">
@@ -51,14 +51,26 @@
 import './style.scss';
 
 const menu = [
-  { title: '首页', path: '/index', name: 'index', },
+  { title: '首页', path: '/index', name: 'index' },
   {
     title: '产品',
     // path: '/product',
     name: 'product',
     child: [
-      { title: '一起看书', path: '/products/books', name: 'books', class: 'hl-yiqikanshu', menuColor: true, },
-      { title: '美哒私聊', path: '/products/privatechat', name: 'privatechat', class: 'hl-meida', menuColor: true, },
+      {
+        title: '一起看书',
+        path: '/products/books',
+        name: 'books',
+        class: 'hl-yiqikanshu',
+        menuColor: true,
+      },
+      {
+        title: '美哒私聊',
+        path: '/products/privatechat',
+        name: 'privatechat',
+        class: 'hl-meida',
+        menuColor: true,
+      },
     ],
   },
   {
@@ -117,7 +129,7 @@ function findName(data, name) {
       }
     }
   }
-  res(data)
+  res(data);
   return value;
 }
 
@@ -131,6 +143,7 @@ export default {
       menuColor: '',
       fixedTop: '',
       scrollTop: '',
+      isIndex: false,
     };
   },
   computed: {},
@@ -178,6 +191,13 @@ export default {
       this.activeIndex = index;
     },
     setMenuColor(bool, name) {
+      if (document.documentElement.clientWidth <= 577 && name !== 'index') {
+        document.body.style.paddingTop = '60px';
+        this.isIndex = false;
+      } else {
+        document.body.style.paddingTop = '0px';
+        this.isIndex = true;
+      }
       if (bool) {
         this.menuColor = true;
       } else {
