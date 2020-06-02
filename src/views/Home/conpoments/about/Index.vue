@@ -1,12 +1,8 @@
 <template>
   <div class="container margin-block hl-index-about">
-    <h3 class="hl-hd-block">
-      {{ title }}
-    </h3>
+    <h3 class="hl-hd-block">{{ title }}</h3>
     <div class="info">
-      <p>
-        {{ des }}
-      </p>
+      <p>{{ des }}</p>
     </div>
     <div class="items">
       <ul>
@@ -15,9 +11,7 @@
             <div class="img">
               <img :src="k.img" :alt="k.title" />
             </div>
-            <h4>
-              {{ k.title }}
-            </h4>
+            <h4>{{ k.title }}</h4>
             <p>{{ k.des }}</p>
           </div>
         </li>

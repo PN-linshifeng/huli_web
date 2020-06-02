@@ -1,9 +1,7 @@
 <template>
   <div class="container-full hl-cooperation">
     <div class="container">
-      <h3 class="hl-hd-block">
-        {{ title }}
-      </h3>
+      <h3 class="hl-hd-block">{{ title }}</h3>
       <div class="content">
         <ul>
           <li v-for="k in data" :key="k.title">
