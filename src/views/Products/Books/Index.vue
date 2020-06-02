@@ -27,16 +27,12 @@
     </swiper>
     <div class="container-full">
       <el-row class="container">
-        <el-col :sm="12" class="content-text hidden-sm-and-up">
+        <el-col :sm="12" class="content-text">
           <h2>免费好看</h2>
           <p>海量全免费 本本都好看</p>
         </el-col>
         <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/book_0.png" alt="" />
-        </el-col>
-        <el-col :sm="12" class="content-text hidden-xs-only">
-          <h2>免费好看</h2>
-          <p>海量全免费 本本都好看</p>
         </el-col>
       </el-row>
     </div>
@@ -53,16 +49,12 @@
     </div>
     <div class="container-full">
       <el-row class="container">
-        <el-col :sm="12" class="content-text hidden-sm-and-up">
-          <h2>免费好看</h2>
-          <p>海量全免费 本本都好看</p>
+        <el-col :sm="12" class="content-text">
+          <h2>精选分类</h2>
+          <p>人气小说 你想看的全部都有</p>
         </el-col>
         <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/book_2.png" alt="" />
-        </el-col>
-        <el-col :sm="12" class="content-text hidden-xs-only">
-          <h2>精选分类</h2>
-          <p>人气小说 你想看的全部都有</p>
         </el-col>
       </el-row>
     </div>

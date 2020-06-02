@@ -1,7 +1,7 @@
 .about-us {
   background-color: #fafafa;
   padding-bottom: 6.25rem /* 100/16 */;
-  @include phoneVertical {
+  @include xs {
     padding-bottom: 0;
   }
   .hl-title-bg {
@@ -44,6 +44,12 @@
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
           -o-border-radius: 50%;
+          @include xs{
+            width: 6rem;
+            height: 6rem;
+            font-size: 1.5rem;
+            line-height: 3.5rem;
+          }
           //   letter-spacing: 2px;
           span {
             font-size: 1rem;
@@ -55,17 +61,21 @@
         }
       }
       .el-divider {
-        margin: 4rem 0;
+        margin: 3rem 0;
+      }
+      .about-msg-item{
+        padding: 1rem 0;
       }
       .about-img {
-        padding: 2rem;
+        padding-right: 2rem;
         float: left;
         img {
           max-width: 7rem;
         }
       }
       .about-info {
-        padding: 3rem 0;
+        overflow: hidden;
+        // padding: 3rem 0;
         line-height: 2;
       }
     }

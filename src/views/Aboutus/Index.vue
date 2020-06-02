@@ -14,7 +14,7 @@
             <p>经数年专业倾力打造，公司旗下你怎么显卡家四口礼品卡接受法国东部v和是降低房价的过快加大每次每学年查看三星。</p>
             <p>集团从2020年开发至今，已经成功共患难你手机打开看爱丽丝靠近享年八咋。</p>
           </div>
-          <el-row class="hidden-xs-only">
+          <el-row :gutter="20">
             <el-col :span="8" class="about-number">
               <h1>8<span>年</span></h1>
               <p>运作经验</p>
@@ -29,11 +29,11 @@
             </el-col>
           </el-row>
         </div>
-        <div class="hidden-xs-only">
-          <el-divider />
+        <el-divider />
+        <div>
           <h3><span class="red-text">一</span> 企业文化</h3>
-          <el-row>
-            <el-col :span="12">
+          <el-row :gutter="20">
+            <el-col :md="12" class="about-msg-item">
               <div class="about-img">
                 <img src="../../assets/images/about_0.png" alt="" />
               </div>
@@ -42,7 +42,7 @@
                 <p>整合的价值，资源的有效配置，通过共享和协同工作，形成有价值有效率的一个整体</p>
               </div>
             </el-col>
-            <el-col :span="12">
+            <el-col :md="12" class="about-msg-item">
               <div class="about-img">
                 <img src="../../assets/images/about_1.png" alt="" />
               </div>
@@ -51,7 +51,7 @@
                 <p>整合的价值，资源的有效配置，通过共享和协同工作，形成有价值有效率的一个整体</p>
               </div>
             </el-col>
-            <el-col :span="12">
+            <el-col :md="12" class="about-msg-item">
               <div class="about-img">
                 <img src="../../assets/images/about_2.png" alt="" />
               </div>
@@ -60,7 +60,7 @@
                 <p>整合的价值，资源的有效配置，通过共享和协同工作，形成有价值有效率的一个整体</p>
               </div>
             </el-col>
-            <el-col :span="12">
+            <el-col :md="12" class="about-msg-item">
               <div class="about-img">
                 <img src="../../assets/images/about_3.png" alt="" />
               </div>

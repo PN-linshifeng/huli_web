@@ -26,7 +26,7 @@
       font-size: 0;
       vertical-align: middle;
       text-align: left;
-      @include phoneVertical {
+      @include xs {
         text-align: center;
       }
       .content-text {
@@ -43,7 +43,7 @@
       }
       p {
         font-size: 1.5rem;
-        @include phoneVertical {
+        @include xs {
           font-size: 1rem;
           margin-top: 2rem;
         }
@@ -51,8 +51,8 @@
       .el-button {
         font-size: 1rem;
         margin-top: 3rem;
-        @include phoneVertical {
-          margin: 1rem 2rem 0;
+        @include xs {
+          margin: 1rem .5rem 0;
         }
         img {
           max-width: 1rem;
@@ -60,7 +60,7 @@
         }
       }
       .content-img {
-        @include phoneVertical {
+        @include xs {
           text-align: center;
         }
         img {
@@ -78,6 +78,9 @@
       background-color: #fff;
       .container{
         background: url(../../../assets/images/products/book_bg_0.png) no-repeat center bottom;
+        .content-text{
+          float: right;
+        }
       }
     }
     &:nth-child(3){
@@ -90,6 +93,9 @@
       background-color: #fff;
       .container{
         background: url(../../../assets/images/products/book_bg_2.png) no-repeat center bottom;
+        .content-text{
+          float: right;
+        }
       }
     }
     &:nth-child(5){
@@ -102,7 +108,7 @@
       width: 100%;
       max-width: 62.5rem;
       margin: 0 auto;
-      @include phoneVertical {
+      @include xs {
         text-align: center;
       }
       .content-img {
@@ -111,14 +117,14 @@
           max-height: 31rem;
           margin-top: 6rem;
           text-align: center;
-          @include phoneVertical {
+          @include xs {
             margin-top: 1rem;
           }
         }
       }
       .content-text {
         padding: 16rem 6rem;
-        @include phoneVertical {
+        @include xs {
           padding: 2rem 0;
         }
         h2 {
@@ -132,7 +138,7 @@
   .download_layout {
     padding: 5.625rem 0;
     text-align: center;
-    @include phoneVertical {
+    @include xs {
       padding: 3rem 0;
     }
     h2 {

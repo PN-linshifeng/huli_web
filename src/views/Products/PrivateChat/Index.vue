@@ -29,16 +29,12 @@
     </swiper>
     <div class="container-full">
       <el-row class="container">
-        <el-col :sm="12" class="content-text hidden-sm-and-up">
+        <el-col :sm="12" class="content-text">
           <h2>恋爱脱单</h2>
           <p>来这里遇见甜甜的恋爱</p>
         </el-col>
         <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/chat_0.png" alt="" />
-        </el-col>
-        <el-col :sm="12" class="content-text hidden-xs-only">
-          <h2>恋爱脱单</h2>
-          <p>来这里遇见甜甜的恋爱</p>
         </el-col>
       </el-row>
     </div>
@@ -55,16 +51,12 @@
     </div>
     <div class="container-full">
       <el-row class="container">
-        <el-col :sm="12" class="content-text hidden-sm-and-up">
+        <el-col :sm="12" class="content-text">
           <h2>女神私房生活</h2>
           <p>随时查看女神的私密照片、视频</p>
         </el-col>
         <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/chat_2.png" alt="" />
-        </el-col>
-        <el-col :sm="12" class="content-text hidden-xs-only">
-          <h2>女神私房生活</h2>
-          <p>随时查看女神的私密照片、视频</p>
         </el-col>
       </el-row>
     </div>

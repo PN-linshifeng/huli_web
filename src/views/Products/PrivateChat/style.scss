@@ -26,7 +26,7 @@
       font-size: 0;
       vertical-align: bottom;
       text-align: left;
-      @include phoneVertical {
+      @include xs {
         text-align: center;
       }
       .content-text {
@@ -38,7 +38,7 @@
       }
       p {
         font-size: 1.5rem;
-        @include phoneVertical {
+        @include xs {
           display: inline;
         }
       }
@@ -47,7 +47,7 @@
         margin-top: 3rem;
         background-color: #000;
         border-color: #000;
-        @include phoneVertical {
+        @include xs {
           margin: 1rem 2rem 0;
         }
         img {
@@ -56,14 +56,12 @@
         }
       }
       .content-img {
-        @include phoneVertical {
           text-align: center;
-        }
         img {
           max-width: 80%;
-          @include phoneVertical {
-            max-width: 100%;
-          }
+          // @include xs {
+          //   max-width: 100%;
+          // }
         }
       }
     }
@@ -73,13 +71,16 @@
     // background-color: #fff;
     max-height: 36rem;
     overflow: hidden;
-    @include phoneVertical {
+    @include xs {
       max-height: 43rem;
     }
     &:nth-child(2) {
       background-color: #fff;
       .container {
         background: url(../../../assets/images/products/chat_bg_0.png) no-repeat center bottom;
+        .content-text{
+          float: right;
+        }
       }
     }
     &:nth-child(3) {
@@ -92,7 +93,9 @@
       background-color: #fff;
       .container {
         background: url(../../../assets/images/products/chat_bg_2.png) no-repeat 70% bottom;
-        // background: url(../../../assets/images/products/chat_bg_2.png) no-repeat center bottom;
+        .content-text{
+          float: right;
+        }
       }
     }
     &:nth-child(5) {
@@ -105,7 +108,7 @@
       width: 100%;
       max-width: 75rem;
       margin: 0 auto;
-      @include phoneVertical {
+      @include xs {
         text-align: center;
       }
       img {
@@ -115,7 +118,7 @@
       .content-text {
         padding: 13rem 9rem;
         // line-height: 2;
-        @include phoneVertical {
+        @include xs {
           padding: 2rem 0;
         }
         h2 {
@@ -127,7 +130,7 @@
         font-size: 0;
         text-align: center;
         padding-top: 5rem;
-        @include phoneVertical {
+        @include xs {
           padding-top: 2rem;
         }
       }
