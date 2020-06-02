@@ -10,7 +10,7 @@
       <div class="hl-mian">
         <input id="checkboxNav" v-model="showNav" type="checkbox" hidden />
         <nav class="hl-nav">
-          <label for="checkboxNav" class="hidden-ipad-up">
+          <label for="checkboxNav" class="hidden-sm-and-up">
             <i class="el-icon-close" />
           </label>
           <ul>
@@ -38,9 +38,9 @@
               </li>
             </template>
           </ul>
-          <div class="hl-copy hidden-ipad-up">Copyright © 2020 狐狸文化传媒</div>
+          <div class="hl-copy hidden-sm-and-up">Copyright © 2020 狐狸文化传媒</div>
         </nav>
-        <label for="checkboxNav" class="hidden-ipad-up">
+        <label for="checkboxNav" class="hidden-sm-and-up">
           <i class="el-icon-s-unfold" />
         </label>
       </div>
@@ -172,6 +172,9 @@ export default {
         document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
       this.scrollTop = scrollTop;
     };
+    window.onresize = () => {
+      this.setPaddingTop();
+    };
   },
   methods: {
     handleSwitchChild(index) {
@@ -191,17 +194,20 @@ export default {
       this.activeIndex = index;
     },
     setMenuColor(bool, name) {
+      this.setPaddingTop();
+      if (bool) {
+        this.menuColor = true;
+      } else {
+        this.menuColor = false;
+      }
+    },
+    setPaddingTop() {
       if (document.documentElement.clientWidth <= 577 && name !== 'index') {
         document.body.style.paddingTop = '60px';
         this.isIndex = false;
       } else {
         document.body.style.paddingTop = '0px';
         this.isIndex = true;
-      }
-      if (bool) {
-        this.menuColor = true;
-      } else {
-        this.menuColor = false;
       }
     },
   },
