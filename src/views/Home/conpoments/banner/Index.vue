@@ -1,5 +1,5 @@
 <template>
-  <div class="index-banner margin-block container-full">
+  <div class="index-banner hl-margin-block container-full">
     <swiper ref="mySwiper" :options="swiperOption" :not-next-tick="notNextTick">
       <!-- slides -->
 

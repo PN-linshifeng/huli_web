@@ -25,10 +25,10 @@
           <h3 @click.stop="handleShow('1')">产品中心</h3>
           <ul>
             <li>
-              <a href="#" title="狐狸小说">狐狸小说</a>
+              <router-link to="/products/books">狐狸小说</router-link>
             </li>
             <li>
-              <a href="#" title="美哒私聊">美哒私聊</a>
+              <router-link to="/products/privatechat">美哒私聊</router-link>
             </li>
           </ul>
         </div>
@@ -36,13 +36,10 @@
           <h3 @click.stop="handleShow('2')">关于我们</h3>
           <ul>
             <li>
-              <a href="#" title="公司简介">公司简介</a>
+              <router-link to="/aboutus">公司简介</router-link>
             </li>
             <li>
-              <a href="#" title="企业文化">企业文化</a>
-            </li>
-            <li>
-              <a href="#" title="新闻动态">新闻动态</a>
+              <router-link to="/news">新闻动态</router-link>
             </li>
           </ul>
         </div>
@@ -50,10 +47,10 @@
           <h3 @click.stop="handleShow('3')">联系我们</h3>
           <ul>
             <li>
-              <a href="#" title="联系我们">联系我们</a>
+              <router-link to="/contractus">联系我们</router-link>
             </li>
             <li>
-              <a href="#" title="加入我们">加入我们</a>
+              <router-link to="/joinus">加入我们</router-link>
             </li>
           </ul>
         </div>

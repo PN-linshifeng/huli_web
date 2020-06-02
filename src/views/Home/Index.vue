@@ -101,8 +101,7 @@ export default {
           {
             title: '百万活跃用户',
             img: require('../../assets/images/index-about-1.png'),
-            des:
-              '以狐狸小说、交友APP为中心，构建多元产品矩阵，打通广泛的内外分发渠道',
+            des: '以狐狸小说、交友APP为中心，构建多元产品矩阵，打通广泛的内外分发渠道',
           },
           {
             title: '广告渠道',

@@ -1,5 +1,8 @@
 .hl-news-page {
   overflow: hidden;
+  .hl-title-bg {
+    background: url(../../assets/images/news-banner-bg.png) no-repeat center center;
+  }
   .hl-news-list {
     margin-bottom: 1rem;
   }
@@ -11,6 +14,11 @@
       ul {
         li {
           width: 100%;
+          text-align: center;
+          a {
+            max-width: 300px;
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -26,6 +34,12 @@
     background: #fafafa;
     line-height: 50/16 * 1rem;
     font-size: 14/16 * 1rem;
+    @include ipad {
+      margin-top: 60px;
+    }
+    @include phoneVertical {
+      margin-top: 0px;
+    }
   }
   .hl-news-content {
     .hl-time-author {
@@ -68,15 +82,13 @@
       width: 32px;
       height: 32px;
       line-height: 32px;
-      border: 1px solid #ccc;
+
       background: #fff;
       border-radius: 50%;
 
       font-size: 0;
       margin-bottom: 10px;
       img {
-        width: 22px;
-        height: auto;
         vertical-align: middle;
       }
     }
