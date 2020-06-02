@@ -1,7 +1,9 @@
 <template>
   <div class="about-us">
-    <div class="title-bg">
-      <h3>关于我们</h3>
+    <div class="hl-title-bg">
+      <div class="content">
+        <h3>关于我们</h3>
+      </div>
     </div>
     <div class="container-full">
       <div class="container">

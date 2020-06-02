@@ -4,17 +4,9 @@
   @include phoneVertical {
     padding-bottom: 0;
   }
-  .title-bg {
-    height: 25rem /* 400/16 */;
-    line-height: 25rem;
-    text-align: center;
-    color: #fff;
+  .hl-title-bg {
     background: url(../../assets/images/joinus_banner.png) no-repeat center top;
     background-size: cover;
-    @include phoneVertical {
-      height: 17rem /* 400/16 */;
-      line-height: 17rem;
-    }
   }
   .container-full {
     max-width: 75rem /* 1200/16 */;

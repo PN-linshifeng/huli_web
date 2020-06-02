@@ -1,7 +1,9 @@
 <template>
   <div class="contract-us">
-    <div class="title-bg hidden-xs-only">
-      <h3>联系我们</h3>
+    <div class="hl-title-bg hidden-xs-only">
+      <div class="content">
+        <h3>联系我们</h3>
+      </div>
     </div>
     <!-- 地图 -->
     <div id="allmap" ref="allmap" class="hidden-sm-and-up" />

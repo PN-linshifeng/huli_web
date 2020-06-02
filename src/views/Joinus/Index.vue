@@ -1,7 +1,9 @@
 <template>
   <div class="join-us">
-    <div class="title-bg">
-      <h3>加入我们</h3>
+    <div class="hl-title-bg">
+      <div class="content">
+        <h3>加入我们</h3>
+      </div>
     </div>
     <div class="container-full">
       <div class="container">
