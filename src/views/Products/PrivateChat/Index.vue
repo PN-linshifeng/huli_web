@@ -8,7 +8,7 @@
     >
       <!-- slides -->
       <swiper-slide>
-        <el-row class="content" :gutter="40">
+        <el-row class="container" :gutter="40">
           <el-col :sm="12" class="content-text">
             <h2>交友APP</h2>
             <p>高颜值聊天交友平台</p>
@@ -27,13 +27,13 @@
       <!-- Optional controls -->
       <!-- <div slot="pagination" class="swiper-pagination" /> -->
     </swiper>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text hidden-sm-and-up">
           <h2>恋爱脱单</h2>
           <p>来这里遇见甜甜的恋爱</p>
         </el-col>
-        <el-col :sm="12">
+        <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/chat_0.png" alt="" />
         </el-col>
         <el-col :sm="12" class="content-text hidden-xs-only">
@@ -42,24 +42,24 @@
         </el-col>
       </el-row>
     </div>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text">
           <h2>视频聊天</h2>
           <p>和陌生美女一对一、随时聊你想聊</p>
         </el-col>
-        <el-col :sm="12">
+        <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/chat_1.png" alt="" />
         </el-col>
       </el-row>
     </div>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text hidden-sm-and-up">
           <h2>女神私房生活</h2>
           <p>随时查看女神的私密照片、视频</p>
         </el-col>
-        <el-col :sm="12">
+        <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/chat_2.png" alt="" />
         </el-col>
         <el-col :sm="12" class="content-text hidden-xs-only">
@@ -68,13 +68,13 @@
         </el-col>
       </el-row>
     </div>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text">
           <h2>真实认证美女</h2>
           <p>官方认证真实美女，随时与你互动</p>
         </el-col>
-        <el-col :sm="12">
+        <el-col :sm="12" class="content-img">
           <img src="../../../assets/images/products/chat_3.png" alt="" />
         </el-col>
       </el-row>

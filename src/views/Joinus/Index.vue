@@ -3,8 +3,8 @@
     <div class="title-bg">
       <h3>加入我们</h3>
     </div>
-    <div class="contract-layout">
-      <div class="content">
+    <div class="container-full">
+      <div class="container">
         <el-collapse v-model="activeName" accordion>
           <el-collapse-item v-for="(item, index) in joinMsg" :key="index" :name="`${index+1}`">
             <template slot="title">

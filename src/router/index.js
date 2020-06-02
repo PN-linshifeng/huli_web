@@ -32,7 +32,7 @@ export const constantRoutes = [
   {
     path: '/',
     // name: '首页', 出现警告所以注释
-    redirect: { name: '/index' }, // 如果不做重定向控制台会警告
+    redirect: { name: 'index' }, // 如果不做重定向控制台会警告
     component: BaseLayout, // 公共页头页尾
     children: [
       {

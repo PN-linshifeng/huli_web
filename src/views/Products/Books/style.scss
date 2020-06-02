@@ -15,11 +15,11 @@
         vertical-align: middle;
       }
       &:nth-child(1) {
-        //   background: url(../../../../assets/images/index-banner-01.jpg) no-repeat center top;
-          background-size: cover;
+        background: url(../../../assets/images/products/book_banner_bg.png) no-repeat center top;
+        background-size: cover;
       }
     }
-    .content {
+    .container {
       display: inline-block;
       width: 100%;
       max-width: 75rem /* 1200/16 */;
@@ -70,14 +70,35 @@
     }
   }
 
-  .product_layout {
+  .container-full {
     // background-color: #fff;
     height: 36rem;
     overflow: hidden;
-    &:nth-child(1) {
-      background-color: #ffa;
+    &:nth-child(2){
+      background-color: #fff;
+      .container{
+        background: url(../../../assets/images/products/book_bg_0.png) no-repeat center bottom;
+      }
     }
-    .product_content {
+    &:nth-child(3){
+      background-color: #fcfcfc;
+      .container{
+        background: url(../../../assets/images/products/book_bg_1.png) no-repeat right bottom;
+      }
+    }
+    &:nth-child(4){
+      background-color: #fff;
+      .container{
+        background: url(../../../assets/images/products/book_bg_2.png) no-repeat center bottom;
+      }
+    }
+    &:nth-child(5){
+      background-color: #fcfcfc;
+      .container{
+        background: url(../../../assets/images/products/book_bg_3.png) no-repeat right bottom;
+      }
+    }
+    .container {
       width: 100%;
       max-width: 62.5rem;
       margin: 0 auto;

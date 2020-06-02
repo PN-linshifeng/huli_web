@@ -3,8 +3,8 @@
     <div class="title-bg">
       <h3>关于我们</h3>
     </div>
-    <div class="contract-layout">
-      <div class="content">
+    <div class="container-full">
+      <div class="container">
         <div>
           <h3><span class="red-text">一</span> 公司简介</h3>
           <div class="about-intro">

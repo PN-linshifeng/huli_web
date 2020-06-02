@@ -20,11 +20,11 @@
     width: 100%;
     height: 300px;
   }
-  .contract-layout {
+  .container-full {
     max-width: 75rem /* 1200/16 */;
     margin: -4rem auto 0;
     background-color: #fff;
-    .content {
+    .container {
       padding: 3rem 4rem;
       @include phoneVertical {
         padding: 2rem 5rem 2rem 1rem;

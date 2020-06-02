@@ -8,7 +8,7 @@
     >
       <!-- slides -->
       <swiper-slide>
-        <el-row class="content" :gutter="40">
+        <el-row class="container" :gutter="40">
           <el-col :sm="11" class="content-text">
             <h2><img src="../../../assets/images/products/book_banner_icon.png" alt="" />一起看书</h2>
             <p>海量正版小说，免费又好看，看书还能赚钱；类型全面，超多种类小说专属推送，精品好书看不停，从吃告别书荒。</p>
@@ -25,8 +25,8 @@
       <!-- Optional controls -->
       <!-- <div slot="pagination" class="swiper-pagination" /> -->
     </swiper>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text hidden-sm-and-up">
           <h2>免费好看</h2>
           <p>海量全免费 本本都好看</p>
@@ -40,8 +40,8 @@
         </el-col>
       </el-row>
     </div>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text">
           <h2>海量小说</h2>
           <p>大神红文 精品好书更新快</p>
@@ -51,8 +51,8 @@
         </el-col>
       </el-row>
     </div>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text hidden-sm-and-up">
           <h2>免费好看</h2>
           <p>海量全免费 本本都好看</p>
@@ -66,8 +66,8 @@
         </el-col>
       </el-row>
     </div>
-    <div class="product_layout">
-      <el-row class="product_content">
+    <div class="container-full">
+      <el-row class="container">
         <el-col :sm="12" class="content-text">
           <h2>热门排行</h2>
           <p>优质好书 无限畅读</p>

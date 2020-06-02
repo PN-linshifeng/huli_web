@@ -15,16 +15,16 @@
         vertical-align: middle;
       }
       &:nth-child(1) {
-        //   background: url(../../../../assets/images/index-banner-01.jpg) no-repeat center top;
-          background-size: cover;
+        background: url(../../../assets/images/products/chat_banner_bg.png) no-repeat center top;
+        background-size: cover;
       }
     }
-    .content {
+    .container {
       display: inline-block;
       width: 100%;
       max-width: 75rem /* 1200/16 */;
       font-size: 0;
-      vertical-align: middle;
+      vertical-align: bottom;
       text-align: left;
       @include phoneVertical {
         text-align: center;
@@ -40,8 +40,6 @@
         font-size: 1.5rem;
         @include phoneVertical {
           display: inline;
-          font-size: 1rem;
-          margin: 0 .5rem;
         }
       }
       .el-button {
@@ -63,18 +61,47 @@
         }
         img {
           max-width: 80%;
+          @include phoneVertical {
+            max-width: 100%;
+          }
         }
       }
     }
   }
 
-  .product_layout {
+  .container-full {
     // background-color: #fff;
-    height: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
     @include phoneVertical {
-      height: 42.75rem;
+      max-height: 43rem;
     }
-    .product_content {
+    &:nth-child(2) {
+      background-color: #fff;
+      .container {
+        background: url(../../../assets/images/products/chat_bg_0.png) no-repeat center bottom;
+      }
+    }
+    &:nth-child(3) {
+      background-color: #fffbf2;
+      .container {
+        background: url(../../../assets/images/products/chat_bg_1.png) no-repeat right bottom;
+      }
+    }
+    &:nth-child(4) {
+      background-color: #fff;
+      .container {
+        background: url(../../../assets/images/products/chat_bg_2.png) no-repeat 70% bottom;
+        // background: url(../../../assets/images/products/chat_bg_2.png) no-repeat center bottom;
+      }
+    }
+    &:nth-child(5) {
+      background-color: #fffbf2;
+      .container {
+        background: url(../../../assets/images/products/chat_bg_3.png) no-repeat right bottom;
+      }
+    }
+    .container {
       width: 100%;
       max-width: 75rem;
       margin: 0 auto;
@@ -86,13 +113,22 @@
         max-height: 31rem;
       }
       .content-text {
-        padding: 16rem 4rem;
+        padding: 13rem 9rem;
+        // line-height: 2;
         @include phoneVertical {
           padding: 2rem 0;
         }
         h2 {
           font-weight: normal;
           letter-spacing: 3px;
+        }
+      }
+      .content-img {
+        font-size: 0;
+        text-align: center;
+        padding-top: 5rem;
+        @include phoneVertical {
+          padding-top: 2rem;
         }
       }
     }

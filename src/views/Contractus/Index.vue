@@ -5,8 +5,8 @@
     </div>
     <!-- 地图 -->
     <div id="allmap" ref="allmap" class="hidden-sm-and-up" />
-    <div class="contract-layout">
-      <div class="content">
+    <div class="container-full">
+      <div class="container">
         <!-- 基本信息 -->
         <div class="base-msg">
           <h3><span class="red-text">一</span> 联系方式</h3>
