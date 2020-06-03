@@ -144,6 +144,7 @@ export default {
       fixedTop: '',
       scrollTop: '',
       isIndex: false,
+      isMinScreen: document.documentElement.clientWidth <= 577,
     };
   },
   computed: {},
@@ -174,6 +175,7 @@ export default {
     };
     window.onresize = () => {
       this.setPaddingTop();
+      this.isMinScreen = document.documentElement.clientWidth <= 577;
     };
   },
   methods: {
@@ -190,8 +192,10 @@ export default {
     },
     handleSetActive(index) {
       this.handleSwitchChild(index);
-      this.showNav = !this.showNav;
       this.activeIndex = index;
+      if (this.isMinScreen) {
+        this.showNav = !this.showNav;
+      }
     },
     setMenuColor(bool, name) {
       this.setPaddingTop();
@@ -202,7 +206,7 @@ export default {
       }
     },
     setPaddingTop() {
-      if (document.documentElement.clientWidth <= 577 && name !== 'index') {
+      if (this.isMinScreen && name !== 'index') {
         document.body.style.paddingTop = '60px';
         this.isIndex = false;
       } else {
